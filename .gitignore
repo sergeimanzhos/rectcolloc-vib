@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*_C.npy
+*_E.npy
+*_cache.json
