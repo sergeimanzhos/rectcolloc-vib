@@ -1,0 +1,213 @@
+{
+ "note": "Every computed spectrum shown in a figure; rows have label (quanta nu3 nu6 nu2 nu4 nu5 nu1), E (cm-1 above ZPE), A (km/mol). Export all to Excel when asked.",
+ "figures": {
+  "cl2co_IR_linear_dipole_aDZ_aTZ(.png,_log.png)": [
+   {
+    "file": "ir_p3_long_dipder.json",
+    "desc": "collocation N=5000 M=15000 (p=3, NN PES), B3LYP/aDZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_atz.json",
+    "desc": "collocation N=5000 M=15000, B3LYP/aTZ linear dipole"
+   }
+  ],
+  "cl2co_IR_linear_dipole_B3LYP_CCSDT(.png,_log.png)": [
+   {
+    "file": "ir_p3_long_dipder.json",
+    "desc": "collocation N=5000 M=15000 (p=3, NN PES), B3LYP/aDZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_atz.json",
+    "desc": "collocation N=5000 M=15000, B3LYP/aTZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_cc_adz.json",
+    "desc": "collocation N=5000 M=15000, CCSD(T)/aDZ linear dipole"
+   }
+  ],
+  "cl2co_IR_M15000_vs_M5000(.png,_log.png)": [
+   {
+    "file": "ir_p3_long_dipder.json",
+    "desc": "collocation N=5000 M=15000 (p=3, NN PES), B3LYP/aDZ linear dipole"
+   },
+   {
+    "file": "ir_t_p3_dipder.json",
+    "desc": "collocation N=5000 M=5000, B3LYP/aDZ linear dipole"
+   }
+  ],
+  "cl2co_IR_M5000(.png,_log.png)": [
+   {
+    "file": "ir_t_p3_dipder.json",
+    "desc": "collocation N=5000 M=5000, B3LYP/aDZ linear dipole"
+   },
+   {
+    "file": "ir_t_p3_dipder_atz.json",
+    "desc": "collocation N=5000 M=5000, B3LYP/aTZ linear dipole"
+   },
+   {
+    "file": "ir_t_p3_dipder_cc_adz.json",
+    "desc": "collocation N=5000 M=5000, CCSD(T)/aDZ linear dipole"
+   }
+  ],
+  "cl2co_IR_linear_dipole_B3LYP_CCSDT_M5000.png": [
+   {
+    "file": "ir_p3_long_dipder.json",
+    "desc": "collocation N=5000 M=15000 (p=3, NN PES), B3LYP/aDZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_atz.json",
+    "desc": "collocation N=5000 M=15000, B3LYP/aTZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_cc_adz.json",
+    "desc": "collocation N=5000 M=15000, CCSD(T)/aDZ linear dipole"
+   },
+   {
+    "file": "ir_t_p3_dipder.json",
+    "desc": "collocation N=5000 M=5000, B3LYP/aDZ linear dipole"
+   }
+  ],
+  "cl2co_IR_calc_vs_exp(.png,_log.png)": [
+   {
+    "file": "ir_p3_long_dipder.json",
+    "desc": "collocation N=5000 M=15000 (p=3, NN PES), B3LYP/aDZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_atz.json",
+    "desc": "collocation N=5000 M=15000, B3LYP/aTZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_cc_adz.json",
+    "desc": "collocation N=5000 M=15000, CCSD(T)/aDZ linear dipole"
+   },
+   {
+    "file": "ir_t_p3_dipder.json",
+    "desc": "collocation N=5000 M=5000, B3LYP/aDZ linear dipole"
+   },
+   "exp_digitized.csv (digitized experimental absorbance)"
+  ],
+  "cl2co_IR_mirror(.png,_log.png)": [
+   {
+    "file": "ir_p3_long_dipder.json",
+    "desc": "collocation N=5000 M=15000 (p=3, NN PES), B3LYP/aDZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_atz.json",
+    "desc": "collocation N=5000 M=15000, B3LYP/aTZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_cc_adz.json",
+    "desc": "collocation N=5000 M=15000, CCSD(T)/aDZ linear dipole"
+   },
+   {
+    "file": "ir_t_p3_dipder.json",
+    "desc": "collocation N=5000 M=5000, B3LYP/aDZ linear dipole"
+   },
+   "exp_digitized.csv (digitized experimental absorbance)"
+  ],
+  "cl2co_IR_vpt2_adz(.png,_log.png)": [
+   {
+    "file": "vpt2_adz.json",
+    "desc": "GVPT2, B3LYP/aDZ PES + full dipole (A) and linear dipole (A_lin)"
+   },
+   {
+    "file": "ir_p3_long_dipder.json",
+    "desc": "collocation N=5000 M=15000 (p=3, NN PES), B3LYP/aDZ linear dipole"
+   },
+   {
+    "file": "ir_p3_M2500_dipder.json",
+    "desc": "collocation N=5000 M=2500, B3LYP/aDZ linear dipole"
+   },
+   "exp_digitized.csv (digitized experimental absorbance)"
+  ],
+  "cl2co_IR_vpt2_atz(.png,_log.png)": [
+   {
+    "file": "vpt2_atz.json",
+    "desc": "GVPT2, B3LYP/aTZ PES + full dipole (A) and linear dipole (A_lin)"
+   },
+   {
+    "file": "ir_p3_long_dipder_atz.json",
+    "desc": "collocation N=5000 M=15000, B3LYP/aTZ linear dipole"
+   },
+   {
+    "file": "ir_p3_M2500_dipder_atz.json",
+    "desc": "collocation N=5000 M=2500, B3LYP/aTZ linear dipole"
+   },
+   "exp_digitized.csv (digitized experimental absorbance)"
+  ],
+  "cl2co_IR_vpt2_adz_atz(.png,_log.png)": [
+   {
+    "file": "vpt2_adz.json",
+    "desc": "GVPT2, B3LYP/aDZ PES + full dipole (A) and linear dipole (A_lin)"
+   },
+   {
+    "file": "vpt2_atz.json",
+    "desc": "GVPT2, B3LYP/aTZ PES + full dipole (A) and linear dipole (A_lin)"
+   },
+   {
+    "file": "ir_p3_long_dipder.json",
+    "desc": "collocation N=5000 M=15000 (p=3, NN PES), B3LYP/aDZ linear dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder_atz.json",
+    "desc": "collocation N=5000 M=15000, B3LYP/aTZ linear dipole"
+   },
+   "exp_digitized.csv (digitized experimental absorbance)"
+  ],
+  "cl2co_IR_dftcolloc_adz_M2500(.png,_log.png)": [
+   {
+    "file": "vpt2_adz.json",
+    "desc": "GVPT2, B3LYP/aDZ PES + full dipole"
+   },
+   {
+    "file": "ir_dft_adz_M2500_dipfit_adz_d4.json",
+    "desc": "collocation on B3LYP/aDZ points N=5000 M=2500, degree-4 fitted DFT dipole"
+   },
+   {
+    "file": "ir_p3_long_dipder.json",
+    "desc": "collocation N=5000 M=15000 (NN PES), B3LYP/aDZ linear dipole"
+   },
+   "exp_digitized.csv"
+  ],
+  "cl2co_IR_vpt2_adz_atz_dftcolloc_adz_M5000(.png,_log.png)": [
+   {
+    "file": "vpt2_adz.json",
+    "desc": "GVPT2, B3LYP/aDZ PES + full dipole"
+   },
+   {
+    "file": "vpt2_atz.json",
+    "desc": "GVPT2, B3LYP/aTZ PES + full dipole"
+   },
+   {
+    "file": "ir_dft_adz_M5000_dipfit_adz_d4.json",
+    "desc": "collocation on B3LYP/aDZ points N=5000 M=5000, degree-4 fitted DFT dipole"
+   },
+   "exp_digitized.csv"
+  ],
+  "cl2co_IR_vpt2_adz_atz_dftcolloc_adz_atz_M5000(.png,_log.png)": [
+   {
+    "file": "vpt2_adz.json",
+    "desc": "GVPT2, B3LYP/aDZ PES + full dipole"
+   },
+   {
+    "file": "vpt2_atz.json",
+    "desc": "GVPT2, B3LYP/aTZ PES + full dipole"
+   },
+   {
+    "file": "ir_dft_adz_M5000_dipfit_adz_d4.json",
+    "desc": "collocation on B3LYP/aDZ points N=5000 M=5000, degree-4 fitted DFT dipole"
+   },
+   {
+    "file": "ir_dft_atz_M5000_dipfit_atz_d4.json",
+    "desc": "collocation on B3LYP/aTZ points N=5000 M=5000, degree-4 fitted DFT dipole"
+   },
+   "exp_digitized.csv"
+  ]
+ },
+ "other_spectra": [
+  {
+   "file": "ir_dft_adz_M2500_dipder.json",
+   "desc": "collocation on B3LYP/aDZ points N=5000 M=2500, B3LYP/aDZ linear dipole (not plotted)"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "charges": {
+  "LiCO2_mulliken": {
+   "C": 0.261,
+   "O1": -0.39,
+   "O2": -0.39,
+   "Li": 0.518
+  },
+  "LiCO2_IAO": {
+   "C": 0.366,
+   "O1": -0.588,
+   "O2": -0.588,
+   "Li": 0.81
+  },
+  "LiCO2_mulliken_spin": {
+   "C": 0.672,
+   "O1": 0.118,
+   "O2": 0.118,
+   "Li": 0.093
+  },
+  "CO2_IAO": {
+   "C": 0.699,
+   "O1": -0.349,
+   "O2": -0.349
+  }
+ },
+ "orbitals": {
+  "CO2_HOMO_eV": -10.443123522931685,
+  "CO2_KS_LUMO_diffuse_sigma_eV": -0.5338782546493014,
+  "CO2_pistar_eV": 0.39278728283497183,
+  "bentCO2_LUMO_eV": -4.939599364730498,
+  "LiCO2_SOMO_eV": -5.439854207656223,
+  "SOMO_overlap2_with_bentCO2_LUMO": 0.981,
+  "SOMO_Li_Mulliken_fraction": 0.106
+ }
+}

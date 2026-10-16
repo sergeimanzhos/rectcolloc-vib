@@ -21,7 +21,13 @@ for f in range(C.shape[1]):
         ph=np.exp(-0.5j*np.angle((C[:,f]**2).sum())); Cr[:,f]=(C[:,f]*ph).real; used.add(f)
 print('complex pairs (state indices):',pairs, ' max|Im E| %.2f cm-1'%np.abs(Ei).max())
 import os
-DIP=os.environ.get('DIP','dipder.npz'); dd=np.load(DIP); dmu=dd['dmu']                     # (mode, xyz)
+DIP=os.environ.get('DIP','dipder.npz'); dd=np.load(DIP)
+POLY='mono' in dd.files                                       # polynomial dipole fit: mono (n,6) exponents, coef (n,3)
+if POLY: MONO=dd['mono']; COEF=dd['coef']; dmu=np.array([COEF[[i for i,a in enumerate(MONO) if a.sum()==1 and a[k]==1][0]] for k in range(NQ)])
+else: dmu=dd['dmu']                                           # (mode, xyz)
+def dipole(q):
+    if not POLY: return q@dmu
+    F=np.prod(q[:,None,:]**MONO[None,:,:],axis=2); return F@COEF
 b=np.load('box.npz'); lo,hi=b['lo'],b['hi']
 # HO product functions for assignment: harmonic energy <= 2700 cm-1 above ZPE
 qn=[t for t in itertools.product(*[range(int(2700/(w*H))+1) for w in c.omega]) if np.dot(t,c.omega)*H<=2700]
@@ -30,7 +36,7 @@ nf=C.shape[1]; Sq=np.zeros(nf); Sn=np.zeros(nf); S0f=np.zeros(nf); M0f=np.zeros(
 cnt=0; i=30_000_000
 while cnt<NPTS:
     q=lo+(hi-lo)*r2(np.arange(i,i+100000),NQ); i+=100000; q=q[V(q)<=vmax/H]; cnt+=len(q)
-    w=c.rho(q); P=bas(q)@Cr; mu=q@dmu                       # linear dipole minus mu0
+    w=c.rho(q); P=bas(q)@Cr; mu=dipole(q)                       # dipole (constant removed later)
     Sq+=(P**2).sum(0); Sn+=(w[:,None]*P**2).sum(0); Ov+=P.T@(w[:,None]*P); Mfull+=np.einsum('nc,na,nb->cab',mu*w[:,None],P,P)
     hp=np.ones((len(q),len(qn)))
     for k in range(NQ):

@@ -6,7 +6,7 @@ from scipy.sparse.linalg import eigs, LinearOperator
 import coords6 as c
 from pes import NNPES, rij
 H2CM=c.H2CM; NQ=c.NQ; NC=3*c.NA
-_P=NNPES(os.environ.get('PESFILE',os.path.join(os.path.dirname(__file__),'fitNN100NNs4.dat')))
+_P=NNPES(os.environ.get('PESFILE',__import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)),'fitNN100NNs4.dat')))
 def V(q):  # hartree, relative to PES minimum
     return (_P(rij(c.X_of_q(q)))-c.Vmin)/H2CM
 def gradV(q,d=1e-3):  # dV/dq_k by 5-pt central FD in q (X(q) linear => exact direction)

@@ -3,3 +3,5 @@ __pycache__/
 *_C.npy
 *_E.npy
 *_cache.json
+*_cache*.jsonl
+vec_*.npz

@@ -1,0 +1,37 @@
+E0 = -188.6650302673
+[   436s] fit: computed 480, in region 105/8000, unconverged 0, surrogate rms -1 cm-1
+[   852s] fit: computed 960, in region 214/8000, unconverged 0, surrogate rms -1 cm-1
+[  1250s] fit: computed 1440, in region 497/8000, unconverged 0, surrogate rms 0 cm-1
+[  1549s] fit: computed 1920, in region 784/8000, unconverged 0, surrogate rms 0 cm-1
+[  1844s] fit: computed 2400, in region 1068/8000, unconverged 0, surrogate rms 0 cm-1
+[  2139s] fit: computed 2880, in region 1362/8000, unconverged 0, surrogate rms 0 cm-1
+[  2432s] fit: computed 3360, in region 1642/8000, unconverged 0, surrogate rms 0 cm-1
+[  2727s] fit: computed 3840, in region 1923/8000, unconverged 0, surrogate rms 0 cm-1
+[  3027s] fit: computed 4320, in region 2211/8000, unconverged 0, surrogate rms 0 cm-1
+[  3332s] fit: computed 4800, in region 2491/8000, unconverged 0, surrogate rms 0 cm-1
+[  3637s] fit: computed 5280, in region 2768/8000, unconverged 0, surrogate rms 0 cm-1
+[  3938s] fit: computed 5760, in region 3054/8000, unconverged 0, surrogate rms 0 cm-1
+[  4241s] fit: computed 6240, in region 3341/8000, unconverged 0, surrogate rms 0 cm-1
+[  4541s] fit: computed 6720, in region 3628/8000, unconverged 0, surrogate rms 0 cm-1
+[  4837s] fit: computed 7200, in region 3914/8000, unconverged 0, surrogate rms 0 cm-1
+[  5133s] fit: computed 7680, in region 4193/8000, unconverged 0, surrogate rms 0 cm-1
+[  5427s] fit: computed 8160, in region 4477/8000, unconverged 0, surrogate rms 0 cm-1
+[  5719s] fit: computed 8640, in region 4754/8000, unconverged 0, surrogate rms 0 cm-1
+[  6014s] fit: computed 9120, in region 5040/8000, unconverged 0, surrogate rms 0 cm-1
+[  6308s] fit: computed 9600, in region 5324/8000, unconverged 0, surrogate rms 0 cm-1
+[  6602s] fit: computed 10080, in region 5612/8000, unconverged 0, surrogate rms 0 cm-1
+[  6897s] fit: computed 10560, in region 5893/8000, unconverged 0, surrogate rms 0 cm-1
+[  7194s] fit: computed 11040, in region 6182/8000, unconverged 0, surrogate rms 0 cm-1
+[  7488s] fit: computed 11520, in region 6461/8000, unconverged 0, surrogate rms 0 cm-1
+[  7781s] fit: computed 12000, in region 6747/8000, unconverged 0, surrogate rms 0 cm-1
+[  8076s] fit: computed 12480, in region 7030/8000, unconverged 0, surrogate rms 0 cm-1
+[  8369s] fit: computed 12960, in region 7309/8000, unconverged 0, surrogate rms 0 cm-1
+[  8663s] fit: computed 13440, in region 7599/8000, unconverged 0, surrogate rms 0 cm-1
+[  8955s] fit: computed 13920, in region 7881/8000, unconverged 0, surrogate rms 0 cm-1
+[  9248s] fit: computed 14400, in region 8157/8000, unconverged 0, surrogate rms 0 cm-1
+done fit
+[   474s] val: computed 480, in region 279/800, unconverged 0, surrogate rms 0 cm-1
+[   939s] val: computed 960, in region 560/800, unconverged 0, surrogate rms 0 cm-1
+[  1402s] val: computed 1440, in region 842/800, unconverged 0, surrogate rms 0 cm-1
+done val
+pts done 0 Tue Oct 13 20:29:02 JST 2026

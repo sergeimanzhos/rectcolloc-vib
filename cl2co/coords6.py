@@ -1,7 +1,7 @@
 """Eckart-frame dimensionless normal coordinates for Cl2CO (C,O,Cl1,Cl2), atomic units."""
 import numpy as np
 H2CM=219474.6313705
-_d=np.load(__import__('os').path.join(__import__('os').path.dirname(__file__),'eq.npz'))
+_d=np.load(__import__('os').path.join(__import__('os').path.dirname(__import__('os').path.abspath(__file__)),'eq.npz'))
 X0=_d['X0']; m=_d['m']; Vmin=float(_d['Vmin']); NA=len(m)
 mm=np.repeat(m,3)
 def _vib():

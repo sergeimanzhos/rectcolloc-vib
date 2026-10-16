@@ -1,0 +1,169 @@
+{
+ "note": "Every computed LiCO2 spectrum shown in a figure; rows have label (quanta nu1..nu6, ascending frequency), E (cm-1 above ZPE), A (km/mol).",
+ "figures": {
+  "results/lico2_IR_vpt2_adz_colloc_adz_N10000(.png,_log.png)": [
+   {
+    "file": "vpt2_adz.json",
+    "desc": "GVPT2 (cl2co vp2.py, K=10), UB3LYP-D3(BJ)/aug-cc-pVDZ, 85-point stencil delta=0.25 (vp_adz.npz), full polynomial dipole"
+   },
+   {
+    "file": "results/ir_colloc_adz_N10000.json",
+    "desc": "collocation on UB3LYP-D3(BJ)/aug-cc-pVDZ points, N=10000 M=16150 Vmax=5500 (vec_mser_v5500_M16150), degree-6 fitted DFT dipole, rho-weighted dense grid, Loewdin"
+   }
+  ],
+  "results/lico2_IR_vpt2_adz_colloc_adz_N10000_exp(.png,_log.png)": [
+   {
+    "file": "vpt2_adz.json",
+    "desc": "GVPT2 (cl2co vp2.py, K=10), UB3LYP-D3(BJ)/aug-cc-pVDZ, 85-point stencil delta=0.25 (vp_adz.npz), full polynomial dipole"
+   },
+   {
+    "file": "results/ir_colloc_adz_N10000.json",
+    "desc": "collocation on UB3LYP-D3(BJ)/aug-cc-pVDZ points, N=10000 M=16150 Vmax=5500 (vec_mser_v5500_M16150), degree-6 fitted DFT dipole, rho-weighted dense grid, Loewdin"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1A_LiCO2_Ar_matrix.csv",
+    "desc": "experiment (upper half): Li + CO2 in Ar, 15 K, as deposited; digitized Fig. 1A of Kafafi et al. JACS 105, 3886 (1983); band-corrected wavenumber; absorbance = -log10(T/baseline), running-maximum baseline +-75 cm-1"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1B_LiCO2_Ar_matrix.csv",
+    "desc": "experiment (lower half): same after 5 h IR exposure (Cs -> C2v); digitized Fig. 1B; same processing"
+   }
+  ],
+  "results/lico2_IR_vpt2_adz_colloc_adz100_old_N14000(.png,_log.png)": [
+   {
+    "file": "vpt2_adz_hi.json",
+    "desc": "GVPT2 (cl2co vp2.py, K=10, states to 2400 cm-1), UB3LYP-D3(BJ)/aug-cc-pVDZ, 85-point stencil"
+   },
+   {
+    "file": "results/ir_colloc_adz100_old_N14000.json",
+    "desc": "collocation, 100 states, N=14000 M=16150 Vmax=5500 (vec_f100_old_N14000), degree-6 fitted DFT dipole"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1A_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, as deposited (upper half)"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1B_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, after 5 h IR exposure (lower half)"
+   }
+  ],
+  "results/lico2_IR_adz100_zoom_250_700(.png,_log.png)": [
+   {
+    "file": "vpt2_adz_hi.json",
+    "desc": "GVPT2 (cl2co vp2.py, K=10, states to 2400 cm-1), UB3LYP-D3(BJ)/aug-cc-pVDZ, 85-point stencil"
+   },
+   {
+    "file": "results/ir_colloc_adz100_old_N14000_range.json",
+    "desc": "same collocation rows with Elo, Ehi = range of each level over N=10000/14000 x old/new point sets"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1A_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, as deposited (upper half)"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1B_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, after 5 h IR exposure (lower half)"
+   }
+  ],
+  "results/lico2_IR_adz100_zoom_700_1500(.png,_log.png)": [
+   {
+    "file": "vpt2_adz_hi.json",
+    "desc": "GVPT2 (cl2co vp2.py, K=10, states to 2400 cm-1), UB3LYP-D3(BJ)/aug-cc-pVDZ, 85-point stencil"
+   },
+   {
+    "file": "results/ir_colloc_adz100_old_N14000_range.json",
+    "desc": "same collocation rows with Elo, Ehi = range of each level over N=10000/14000 x old/new point sets"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1A_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, as deposited (upper half)"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1B_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, after 5 h IR exposure (lower half)"
+   }
+  ],
+  "results/lico2_IR_adz100_zoom_1500_1720(.png,_log.png)": [
+   {
+    "file": "vpt2_adz_hi.json",
+    "desc": "GVPT2 (cl2co vp2.py, K=10, states to 2400 cm-1), UB3LYP-D3(BJ)/aug-cc-pVDZ, 85-point stencil"
+   },
+   {
+    "file": "results/ir_colloc_adz100_old_N14000_range.json",
+    "desc": "same collocation rows with Elo, Ehi = range of each level over N=10000/14000 x old/new point sets"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1A_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, as deposited (upper half)"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1B_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, after 5 h IR exposure (lower half)"
+   }
+  ],
+  "results/lico2_IR_adz100_zoom_1720_2200(.png,_log.png)": [
+   {
+    "file": "vpt2_adz_hi.json",
+    "desc": "GVPT2 (cl2co vp2.py, K=10, states to 2400 cm-1), UB3LYP-D3(BJ)/aug-cc-pVDZ, 85-point stencil"
+   },
+   {
+    "file": "results/ir_colloc_adz100_old_N14000_range.json",
+    "desc": "same collocation rows with Elo, Ehi = range of each level over N=10000/14000 x old/new point sets"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1A_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, as deposited (upper half)"
+   },
+   {
+    "file": "exp/Kafafi1983_Fig1B_LiCO2_Ar_matrix.csv",
+    "desc": "experiment, Ar 15 K, after 5 h IR exposure (lower half)"
+   }
+  ],
+  "results/lico2_IR_adz100_A4(.png,_log.png)": [
+   {
+    "file": "vpt2_adz_hi.json",
+    "desc": "GVPT2 (cl2co vp2.py, K=10, states to 2400 cm-1), UB3LYP-D3(BJ)/aug-cc-pVDZ, 85-point stencil"
+   },
+   {
+    "file": "results/ir_colloc_adz100_old_N14000_range.json",
+    "desc": "same collocation rows with Elo, Ehi = range of each level over N=10000/14000 x old/new point sets"
+   }
+  ],
+  "results/lico2_IR_summary_adz_atz(.png,_log.png)": [
+   {
+    "file": "results/ir_colloc_adz100_old_N14000_range.json",
+    "desc": "collocation aDZ, 100 states, N=14000 M=16150 Vmax=5500; Elo/Ehi = range over N=10000/14000 x two point sets (upper half, blue solid)"
+   },
+   {
+    "file": "results/ir_colloc_atz100_N14000_range.json",
+    "desc": "collocation aTZ, 100 states, N=14000 M=13831 Vmax=5500; same range definition (upper half, red dashed)"
+   },
+   {
+    "file": "vpt2_adz_hi.json",
+    "desc": "GVPT2 aDZ (lower half, blue solid)"
+   },
+   {
+    "file": "vpt2_atz_hi.json",
+    "desc": "GVPT2 aTZ in aTZ normal coordinates (lower half, red dashed)"
+   }
+  ],
+  "results/lico2_IR_summary_adz_atz_zoom_1480_1720(.png,_log.png)": [
+   {
+    "file": "results/ir_colloc_adz100_old_N14000_range.json",
+    "desc": "collocation aDZ, 100 states, N=14000 M=16150 Vmax=5500; Elo/Ehi = range over N=10000/14000 x two point sets (upper half, blue solid)"
+   },
+   {
+    "file": "results/ir_colloc_atz100_N14000_range.json",
+    "desc": "collocation aTZ, 100 states, N=14000 M=13831 Vmax=5500; same range definition (upper half, red dashed)"
+   },
+   {
+    "file": "vpt2_adz_hi.json",
+    "desc": "GVPT2 aDZ (lower half, blue solid)"
+   },
+   {
+    "file": "vpt2_atz_hi.json",
+    "desc": "GVPT2 aTZ in aTZ normal coordinates (lower half, red dashed)"
+   }
+  ]
+ }
+}

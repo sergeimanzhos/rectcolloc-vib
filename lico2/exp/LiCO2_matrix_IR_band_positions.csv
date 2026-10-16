@@ -1,0 +1,18 @@
+species,isomer,mode,Ar_15K_Kafafi1983_cm-1,Ar_intensity,Kr_9K_Manceron1985_natLi_cm-1,Kr_9K_Manceron1985_6Li_cm-1,note
+LiCO2,C2v,nu4(B2) asym CO2 str (nu_a OCO),1568.6; 1569.9,vs,1568.0; 1566.0,1568.5; 1566.5,"Ar: main site pair, shoulders 1561.9, 1564.4 sh"
+LiCO2,C2v,nu1(A1) sym CO2 str (nu_s OCO),1329.9; 1325.0,"w, br",1326 (1304),1323 (1303),Kr paper lists 1326/1304 doublet; Kafafi assigns 1304.9 to LiCO2:CO2
+LiCO2,C2v,nu2(A1) delta(OCO),798.7,w,795,796,
+LiCO2,C2v,nu3(A1) sym Li-O str,533.4; 526.0; 520.0,"m, w, m",522; 509,557; 540.5,"Kafafi: 520.0 m, 526.0 w, 533.4 m"
+LiCO2,C2v,nu5(B2) asym Li-O str,not obs (calc 400.2),,,,force-field estimate only
+LiCO2,Cs,nu1(A') C=O str,1750.9; 1755.7,"vs, m",1750; 1745,1750; 1745,site doublet
+LiCO2,Cs,nu2(A') C-O str,1221.4; 1208.7,"m, m",1222,1222,
+LiCO2,Cs,nu3(A') delta(OCO),739.5,m,740,743,
+LiCO2,Cs,nu4(A') Li-O str,611.6; 599.3,"m br, m",588,622,
+LiCO2,Cs,nu5(A') delta(LiOC),not obs (calc 200.0),,,,force-field estimate only
+LiCO2:CO2,,asym CO2 str,1574.9,s,"1571 (species B, Li(CO2)2)",1571.5,solvated LiCO2
+LiCO2:CO2,,sym CO2 str,1304.9,"w, br",,,
+LiCO2:CO2,,delta(OCO),807.0,"w, br",787 (species B),788,
+LiC2O4,,C=O str,1968.7,s,1966 (species D),1966,
+LiC2O4,,C-O str,1159.8,m,1155.5 (species D),1155.5,
+Li2C2O4,,,1662.2; 1315.5; 807.0; 497.7,"s, w br, w br, m",1658.5; 1315; 805; 509 (species C),1658.5; 1315; 810; 540,
+Li2CO2,,,1447.9; 984.2; 565.9,"m br, w br, w br",,,
