@@ -13,7 +13,7 @@ Computes the lowest `nev` J=0 vibrational levels of a molecule. Method: rectangu
 - Many cores (for example the user's 48-core / 223 GB Windows PC): run full-size jobs. Parallelize as in section 7, run long jobs in the background with a log file, and checkpoint.
 - Small cloud workspace (2-4 cores): say so and use reduced test sizes unless the user insists on full size.
 
-**Reuse existing code.** If the project folder already has tested scripts (e.g. `accum.py`, `collo.py`, a `run_*.py`, a ported PES), read them first and reuse or extend them. Only write new code where it is missing. Read the project's CLAUDE.md for molecule-specific facts. Worked examples with tested code are in the repository https://github.com/sergeimanzhos/rectcolloc-vib (`cl2co/`: 6D, NN PES and DFT points; `lico2/`: 6D doublet radical, DFT points, 100 states, IR intensities, GVPT2; `co2/`: linear triatomic, vibrational angular momentum blocks, gradient rows in internal coordinates).
+**Reuse existing code.** If the project folder already has tested scripts (e.g. `accum.py`, `collo.py`, a `run_*.py`, a ported PES), read them first and reuse or extend them. Only write new code where it is missing. Read the project's CLAUDE.md for molecule-specific facts. Worked examples with tested code are in the repository https://github.com/sergeimanzhos/rectcolloc-vib (`cl2co/`: 6D, NN PES and DFT points; `lico2/`: 6D doublet radical, DFT points, 100 states, IR intensities, GVPT2).
 
 **Inputs.** Ask only for missing essentials; use the defaults for everything else and state them once at the start.
 
