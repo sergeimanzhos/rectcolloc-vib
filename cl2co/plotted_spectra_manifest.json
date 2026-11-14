@@ -202,6 +202,25 @@
     "desc": "collocation on B3LYP/aTZ points N=5000 M=5000, degree-4 fitted DFT dipole"
    },
    "exp_digitized.csv"
+  ],
+  "cl2co_IR_vpt2_adz_atz_dftcolloc_adz_atz_M5000_dftw(.png,_log.png)": [
+   {
+    "file": "vpt2_adz.json",
+    "desc": "GVPT2, B3LYP/aDZ PES + full dipole"
+   },
+   {
+    "file": "vpt2_atz.json",
+    "desc": "GVPT2, B3LYP/aTZ PES + full dipole"
+   },
+   {
+    "file": "results/ir_dftw_dft_adz_M5000_dipfit_adz_d4.json",
+    "desc": "collocation on B3LYP/aDZ points N=5000 M=5000, widths tuned on the aDZ DFT data (max residual, best_widths_dft_adz_max.json), degree-4 fitted DFT dipole (refit on complete aDZ data)"
+   },
+   {
+    "file": "results/ir_dftw_dft_atz_M5000_dipfit_atz_d4.json",
+    "desc": "collocation on B3LYP/aTZ points N=5000 M=5000, same widths, degree-4 fitted DFT dipole"
+   },
+   "exp_digitized.csv"
   ]
  },
  "other_spectra": [

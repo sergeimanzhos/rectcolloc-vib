@@ -8,7 +8,7 @@ from scipy import constants as K
 H=H2CM; ea0=K.e*K.physical_constants['Bohr radius'][0]
 def A_kmmol(nu,mu2): return 8*np.pi**3*K.N_A*nu*100*mu2*ea0**2/(3*K.h*K.c*4*np.pi*K.epsilon_0)/1000
 tag=sys.argv[1]; N=int(sys.argv[2]); vmax=float(sys.argv[3]); NPTS=int(sys.argv[4]) if len(sys.argv)>4 else 400000
-BASEW=np.array([0.857375,0.857375,0.95,0.9025,0.95,0.95])
+BASEW = np.array([float(x) for x in __import__('os').environ['WIDTHS'].split(',')]) if __import__('os').environ.get('WIDTHS') else np.array([0.857375,0.857375,0.95,0.9025,0.95,0.95])
 cq=np.load(f'pts_20000000_1150_{N}.npz')['q']; bas=Basis(cq,BASEW)
 E=np.load(f'{tag}_E.npy'); C=np.load(f'{tag}_C.npy')
 Cr=np.zeros(C.shape); pairs=[]; used=set(); Ei=E.imag*H

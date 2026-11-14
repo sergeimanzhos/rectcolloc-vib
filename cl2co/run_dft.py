@@ -7,7 +7,7 @@ from collo6 import Basis, accumulate, solve, residual, H2CM
 H = H2CM
 EMIN = {'adz': -1033.7840144379, 'atz': -1033.8413302173}     # B3LYP minima from vp_dft optimisations
 tag, N, vmax, p, Ms, out = sys.argv[1], int(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4]), [int(x) for x in sys.argv[5].split(',')], sys.argv[6]
-BASEW = np.array([0.857375, 0.857375, 0.95, 0.9025, 0.95, 0.95])
+BASEW = np.array([float(x) for x in __import__('os').environ['WIDTHS'].split(',')]) if __import__('os').environ.get('WIDTHS') else np.array([0.857375, 0.857375, 0.95, 0.9025, 0.95, 0.95])
 dc = np.load(f'dft_{tag}_c.npz'); dv = np.load(f'dft_{tag}_v.npz')
 nc = int(np.argmin(dc['done'])) if not dc['done'].all() else len(dc['done'])     # contiguous prefix done
 assert max(Ms) <= nc, f'only {nc} collocation points available'
