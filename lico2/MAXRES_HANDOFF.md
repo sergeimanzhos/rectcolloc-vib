@@ -1,4 +1,4 @@
-# LiCO2 max-residual redo — handoff for a new Claude session (state 17 Nov 2026, 09:40 JST)
+# LiCO2 max-residual redo — handoff for a new Claude session (state 17 Nov 2026, 18:55 JST)
 
 Read this whole file before doing anything. It replaces the conversation history.
 
@@ -46,6 +46,26 @@ N = 10000 tuning (tune_li_max10k.py, log tune_li_max10k.log), Ec = 1200 fixed:
 Level changes per 1% sweep are hundredths of cm-1 (levels 1-39) to a few tenths (upper levels); see the conversation summary in section 6.
 Fundamentals at N = 10000 with the 5%-stage widths vs the manuscript (N = 14000, old parameters): within 0.1 cm-1 except the nu6 pair
 (-0.7, -1.1 cm-1); mean |change| levels 1-39 0.37, 40-69 1.07, 70-99 1.09 cm-1 (mixes N and parameter changes).
+
+## 4a. UPDATE 17 Nov 2026 18:55 JST — where things stand now (read this before section 4)
+- In the cloud container, fmax_adz_N14000 was killed by the OOM killer (6.1 GB of 7 GB). The cloud container was also reclaimed twice
+  while long jobs were running (overnight, and ~14:18), killing the running job (finished, cached results survive on disk).
+  => No long calculations in the cloud container.
+- The session is linked to Sergei's Windows workstation (desktop-dj0n4p7); the Linux VM reachable through device_bash has only 4 GB / 2 cores
+  (not usable for the runs; it cannot reach WSL). Folder granted: D:\Claude_use (Sergei's designated work folder).
+- ALL final runs (steps 1-10 of final_runs.py: 4 x N = 10000, 4 x N = 14000, 2 intensities) are being run by **Claude Code on the
+  workstation in WSL**, from D:\Claude_use\lico2_final_cc_20261117.tar.gz unpacked to D:\Claude_use\lico2_final, following
+  lico2_final/CLAUDE_CODE_TASK.md. Command: N14000=1 WINDOW=1e9 THREADS=<cores> WORKERS=<k> python3 final_runs.py > final_runs_ws.out.
+  Sergei (18:50): Claude Code expects to finish on the morning of 18 Nov. He will say when it is done.
+- final_runs.py now takes THREADS, WORKERS, WINDOW, N14000 from the environment (defaults: 2, 1, 7000 s, N = 14000 steps refused).
+- NEXT, when Sergei says Claude Code is done:
+  1. Read D:\Claude_use\lico2_final\redo_lico2\final_runs_ws.out; stage results/fmax_*.json, intens_fmax_*.json/.csv,
+     ir_colloc_fmax_*.json, levels_fmax_*.csv into the cloud container (device_stage_files) and copy them into redo_lico2/results.
+  2. Steps B-F of section 4 (ranges with mkrange.py over the 4 runs per basis; Excel; Figure 6 without bars; Word Table 3 untracked,
+     text tracked; report with a table of CHANGES from the manuscript; answer on the Delta(M) term).
+  3. Step 3 of Sergei's 09:08 request, "continue tuning": proposed to hand the tuning to Claude Code on the workstation as well
+     (package + one-paragraph instruction; resumes from the 115 cached trials) — confirm with Sergei before doing it.
+- Promised (not yet done): prepare and test the Excel/Word update scripts on the manuscript data before the results arrive.
 
 ## 4. In progress / pending (do in this order)
 A. Final runs: final_runs.py (restartable, skips finished steps; in the cloud session launch as

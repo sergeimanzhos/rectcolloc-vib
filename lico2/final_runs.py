@@ -3,34 +3,38 @@ Ec = 1200, Vmax = 5000, p = 0, beta = (0.932065, 0.99, 1.0, 1.018814, 1.0, 1.0) 
 Same set of runs as for the manuscript version (f100_*): per basis N = 14000 and N = 10000 on the first point set (cache_adz / cache_atz)
 and on the second, independent point set (cache_adz7 / cache_atz7); same --Ms and --nvalraw as the f100_* runs; Vmax = 5000 for all.
 Intensities (intens.py, region V <= 5000) for the first-set N = 14000 runs, as for the manuscript version.
-The aDZ first-set N = 14000 run (fmax_adz_N14000) was started separately with the same arguments.
+The aDZ first-set N = 14000 run was started separately on 17 Nov 09:11 and was killed by the out-of-memory killer (6.1 GB of 7 GB);
+the N = 10000 runs were therefore moved to the front; the N = 14000 runs need more memory (workstation).
 One step at a time (1 process, 2 threads; two N = 10000 runs at once exceeded the memory). Restartable: finished steps are skipped.
 Exits (code 3) instead of starting a step that would not finish inside the 7000 s window (estimates below); relaunch to continue."""
 import os, sys, json, time, subprocess
 HERE = os.path.dirname(os.path.abspath(__file__)); T0 = time.time()
 BETA = '0.932065,0.99,1.0,1.018814,1.0,1.0'
-ENV = dict(os.environ, OMP_NUM_THREADS='2', OPENBLAS_NUM_THREADS='2', MKL_NUM_THREADS='2')
+WK = os.environ.get('WORKERS', '1'); TH = os.environ.get('THREADS', '2'); WINDOW = float(os.environ.get('WINDOW', 7000))   # workstation: WINDOW=1e9, THREADS=<cores>
+ENV = dict(os.environ, OMP_NUM_THREADS=TH, OPENBLAS_NUM_THREADS=TH, MKL_NUM_THREADS=TH)
 STEPS = [  # ('run', tag, cache, N, Ms, nvalraw, est s)  /  ('int', tag, cache, est s)
+    ('run', 'fmax_adz_N10000', 'cache_adz', 10000, '1000000', 3920, 2700),
+    ('run', 'fmax_atz_N10000', 'cache_atz', 10000, '1000000', 0, 4500),
+    ('run', 'fmax_adz7_N10000', 'cache_adz7', 10000, '1000000', 6900, 4500),
+    ('run', 'fmax_atz7_N10000', 'cache_atz7', 10000, '16000', 1735, 4500),
     ('run', 'fmax_adz_N14000', 'cache_adz', 14000, '1000000', 3920, 5400),
     ('run', 'fmax_atz_N14000', 'cache_atz', 14000, '1000000', 0, 6000),
     ('int', 'fmax_adz_N14000', 'cache_adz', 3600),
     ('int', 'fmax_atz_N14000', 'cache_atz', 3600),
-    ('run', 'fmax_adz_N10000', 'cache_adz', 10000, '1000000', 3920, 2700),
-    ('run', 'fmax_atz_N10000', 'cache_atz', 10000, '1000000', 0, 4500),
-    ('run', 'fmax_adz7_N10000', 'cache_adz7', 10000, '1000000', 6900, 4500),
     ('run', 'fmax_adz7_N14000', 'cache_adz7', 14000, '1000000', 6900, 6000),
-    ('run', 'fmax_atz7_N10000', 'cache_atz7', 10000, '16000', 1735, 4500),
     ('run', 'fmax_atz7_N14000', 'cache_atz7', 14000, '16000', 1735, 6000)]
 for st in STEPS:
     kind, tag, cache, est = st[0], st[1], st[2], st[-1]
     out = os.path.join(HERE, 'results', (tag if kind == 'run' else f'intens_{tag}') + '.json')
     if os.path.exists(out): continue
-    if time.time() - T0 + est > 7000: print('window nearly used up; exiting before', kind, tag, flush=True); sys.exit(3)
+    if kind == 'run' and st[3] == 14000 and os.environ.get('N14000') != '1':
+        print('stopping before the N = 14000 steps (set N14000=1 on a machine with enough memory)', flush=True); sys.exit(4)
+    if time.time() - T0 + est > WINDOW: print('window nearly used up; exiting before', kind, tag, flush=True); sys.exit(3)
     print(time.strftime('%H:%M'), 'start', kind, tag, flush=True)
     if kind == 'run':
         N, Ms, nval = st[3], st[4], st[5]
         cmd = ['python3', 'run_rc.py', '--pes', 'dft', '--cache', f'data/{cache}', '--N', str(N), '--ec', '1200', '--beta', BETA, '--vmax', '5000',
-               '--p', '0', '--Ms', Ms, '--nev', '100', '--workers', '1', '--threads', '2', '--vval', '5000', '--nvalraw', str(nval), '--batch', '1500', '--tag', tag]
+               '--p', '0', '--Ms', Ms, '--nev', '100', '--workers', WK, '--threads', TH, '--vval', '5000', '--nvalraw', str(nval), '--batch', '1500', '--tag', tag]
         log = tag + '.out'
     else:
         M = json.load(open(os.path.join(HERE, 'results', tag + '.json')))['recs'][-1]['M']
