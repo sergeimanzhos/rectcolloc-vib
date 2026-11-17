@@ -1,0 +1,26 @@
+=== Ec scan LiCO2 aDZ: N=10000, M=12000, Vmax=5500, p=0, beta=[1.0, 1.0, 1.0, 1.0, 1.0, 1.0], nev=100, validation first 3920 records with V <= 5000
+Ec=700: max 161.36 (level #93, 2142.7) | 2nd 152.45 | med 31.58 | med20 6.44 | n>150 2 | maxIm 0.28 | ZPE 2478.29 | top level 2174.7 | t 2938s
+Ec=1200: max 126.79 (level #92, 2118.3) | 2nd 117.81 | med 29.06 | med20 7.68 | n>150 0 | maxIm 0.00 | ZPE 2478.27 | top level 2164.7 | t 2728s
+=== Ec scan LiCO2 aDZ: N=10000, M=12000, Vmax=5500, p=0, beta=[1.0, 1.0, 1.0, 1.0, 1.0, 1.0], nev=100, validation first 3920 records with V <= 5000
+Ec=900: max 141.79 (level #93, 2137.8) | 2nd 133.10 | med 29.33 | med20 6.16 | n>150 0 | maxIm 0.00 | ZPE 2478.27 | top level 2169.0 | t 1952s
+Ec=700: max 161.36 (level #93, 2142.7) | 2nd 152.45 | med 31.58 | med20 6.44 | n>150 2 | maxIm 0.28 | ZPE 2478.29 | top level 2174.7 | t 2938s
+Ec=1200: max 126.79 (level #92, 2118.3) | 2nd 117.81 | med 29.06 | med20 7.68 | n>150 0 | maxIm 0.00 | ZPE 2478.27 | top level 2164.7 | t 2728s
+Ec=1500: max 137.38 (level #94, 2132.8) | 2nd 136.19 | med 34.17 | med20 10.64 | n>150 0 | maxIm 0.15 | ZPE 2478.29 | top level 2162.6 | t 1875s
+=== done
+=== Ec scan LiCO2 aDZ: N=10000, M=12000, Vmax=5500, p=0, beta=[1.0, 1.0, 1.0, 1.0, 1.0, 1.0], nev=100, validation first 3920 records with V <= 5000
+Ec=900: max 141.79 (level #93, 2137.8) | 2nd 133.10 | med 29.33 | med20 6.16 | n>150 0 | maxIm 0.00 | ZPE 2478.27 | top level 2169.0 | t 1952s
+Ec=700: max 161.36 (level #93, 2142.7) | 2nd 152.45 | med 31.58 | med20 6.44 | n>150 2 | maxIm 0.28 | ZPE 2478.29 | top level 2174.7 | t 2938s
+Ec=1200: max 126.79 (level #92, 2118.3) | 2nd 117.81 | med 29.06 | med20 7.68 | n>150 0 | maxIm 0.00 | ZPE 2478.27 | top level 2164.7 | t 2728s
+Ec=1500: max 137.38 (level #94, 2132.8) | 2nd 136.19 | med 34.17 | med20 10.64 | n>150 0 | maxIm 0.15 | ZPE 2478.29 | top level 2162.6 | t 1875s
+Ec=800: max 151.89 (level #84, 2064.1) | 2nd 144.39 | med 31.79 | med20 6.08 | n>150 1 | maxIm 0.00 | ZPE 2478.27 | top level 2171.5 | t 2022s
+Ec=1000: max 137.81 (level #93, 2134.3) | 2nd 132.98 | med 27.55 | med20 6.46 | n>150 0 | maxIm 0.00 | ZPE 2478.27 | top level 2166.0 | t 1964s
+=== Ec scan LiCO2 aDZ: N=10000, M=12000, Vmax=5500, p=0, beta=[1.0, 1.0, 1.0, 1.0, 1.0, 1.0], nev=100, validation first 3920 records with V <= 5000
+Ec=900: max 141.79 (level #93, 2137.8) | 2nd 133.10 | med 29.33 | med20 6.16 | n>150 0 | maxIm 0.00 | ZPE 2478.27 | top level 2169.0 | t 1952s
+Ec=700: max 161.36 (level #93, 2142.7) | 2nd 152.45 | med 31.58 | med20 6.44 | n>150 2 | maxIm 0.28 | ZPE 2478.29 | top level 2174.7 | t 2938s
+Ec=1200: max 126.79 (level #92, 2118.3) | 2nd 117.81 | med 29.06 | med20 7.68 | n>150 0 | maxIm 0.00 | ZPE 2478.27 | top level 2164.7 | t 2728s
+Ec=1500: max 137.38 (level #94, 2132.8) | 2nd 136.19 | med 34.17 | med20 10.64 | n>150 0 | maxIm 0.15 | ZPE 2478.29 | top level 2162.6 | t 1875s
+Ec=800: max 151.89 (level #84, 2064.1) | 2nd 144.39 | med 31.79 | med20 6.08 | n>150 1 | maxIm 0.00 | ZPE 2478.27 | top level 2171.5 | t 2022s
+Ec=1000: max 137.81 (level #93, 2134.3) | 2nd 132.98 | med 27.55 | med20 6.46 | n>150 0 | maxIm 0.00 | ZPE 2478.27 | top level 2166.0 | t 1964s
+Ec=1100: max 129.76 (level #93, 2133.2) | 2nd 121.58 | med 28.37 | med20 6.93 | n>150 0 | maxIm 0.00 | ZPE 2478.26 | top level 2165.4 | t 1995s
+Ec=1300: max 127.44 (level #92, 2120.5) | 2nd 119.06 | med 31.44 | med20 8.47 | n>150 0 | maxIm 0.37 | ZPE 2478.29 | top level 2164.7 | t 2077s
+=== done

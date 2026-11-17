@@ -41,6 +41,11 @@ UB3LYP-D3(BJ), aug-cc-pVDZ (aDZ) and aug-cc-pVTZ (aTZ), PySCF (grid 4, gradients
 | `vp_dft_li.py`, `vp_dft_modes.py`, `vp_fit.py`, `vp2_li_hi.py` | GVPT2: stencil, fit, solver (zeroth-order frequencies rescaled to the fitted surface, Oct 2026) |
 | `plot_vpt2_li.py`, `plot_zoom.py`, `plot_summary.py` | Mirror plots (linear and log), convergence bands, A4 layouts |
 | `mol_lico2.py`, `orbitals_lico2.py`, `orb_inplane.py` | Geometry and orbital figures |
+| `surr.py` | Degree-4 polynomial surrogate for the centre selection (V <= Ec); reconstructed 14 Nov 2026 (was missing) |
+| `tune_li_max.py`, `scan_ec_N10000.py`, `tune_li_max10k.py` | Max-residual tuning (Nov 2026): N = 5000 (abandoned), Ec scan at N = 10000, Vmax/p/width tuning at N = 10000 |
+| `final_runs.py` | Final runs with the max-residual parameters (N = 10000/14000 x two point sets, intensities) |
+| `MAXRES_HANDOFF.md`, `TUNING_STATE.md` | State of the max-residual redo, decisions, pending steps, restart commands |
+| `manuscript_tools/` | Excel generator for `LiCO2_levels_aDZ_aTZ.xlsx` (checked against the manuscript version), Word tracked-change helper |
 | `vpt_ff/` | Finite-difference force fields and early VPT2 analysis |
 | `data/cache_{adz,adz7,atz,atz7}/` | DFT points: `fit.npz`, `val.npz` (energies, gradients, dipoles), E0, reference density, box |
 | `results/` | Level / intensity JSON and CSV, `LiCO2_levels_aDZ_aTZ.xlsx` (100 levels x 4 methods), `LiCO2_summary.md` |
