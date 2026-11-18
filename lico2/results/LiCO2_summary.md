@@ -2,6 +2,10 @@
 
 Status: 13 October 2026. All calculations finished; nothing is running.
 
+**Superseded for the collocation numbers (18 Nov 2026):** the collocation results were redone with parameters tuned by the maximum validation
+residual (Ec = 1200, Vmax = 5000, p = 0, widths 0.9321 / 0.99 / 1.00 / 1.0188 / 1.00 / 1.00); see `../MAXRES_HANDOFF.md` section 4b and
+`LiCO2_levels_aDZ_aTZ.xlsx`. The tables below are the October (Ec = 900) version.
+
 ## Method
 
 - **Surface:** UB3LYP-D3(BJ) with aug-cc-pVDZ (aDZ) and aug-cc-pVTZ (aTZ), PySCF, grid 4, gradients with grid response.

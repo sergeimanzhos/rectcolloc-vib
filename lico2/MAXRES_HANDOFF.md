@@ -1,4 +1,4 @@
-# LiCO2 max-residual redo — handoff for a new Claude session (state 17 Nov 2026, 18:55 JST)
+# LiCO2 max-residual redo — handoff for a new Claude session (state 18 Nov 2026; section 4b is the latest)
 
 Read this whole file before doing anything. It replaces the conversation history.
 
@@ -46,6 +46,41 @@ N = 10000 tuning (tune_li_max10k.py, log tune_li_max10k.log), Ec = 1200 fixed:
 Level changes per 1% sweep are hundredths of cm-1 (levels 1-39) to a few tenths (upper levels); see the conversation summary in section 6.
 Fundamentals at N = 10000 with the 5%-stage widths vs the manuscript (N = 14000, old parameters): within 0.1 cm-1 except the nu6 pair
 (-0.7, -1.1 cm-1); mean |change| levels 1-39 0.37, 40-69 1.07, 70-99 1.09 cm-1 (mixes N and parameter changes).
+
+## 4b. COMPLETED 18 Nov 2026 — final runs, manuscript and Excel updated
+
+- **Final runs** (`final_runs.py`, all 10 steps) were run by Claude Code on the workstation (WSL, THREADS = 24, WORKERS = 10, N14000 = 1,
+  WINDOW = 1e9), 17 Nov 15:22 to 18 Nov 00:49; log `final_runs_ws.out`, per-step logs `fmax_*.out`, `intens_fmax_*.out`. Scripts unchanged
+  (md5 equal to the package); smoke test reproduced ZPE 2496.42.
+
+  | run | M | ZPE | validation residual median / max (cm-1) |
+  |---|---|---|---|
+  | fmax_adz_N14000 | 12248 | 2478.26 | 17.7 / 101.2 |
+  | fmax_atz_N14000 | 11690 | 2487.88 | 20.1 / 119.0 |
+  | fmax_adz_N10000 | 12248 | 2478.23 | 25.3 / 119.2 |
+  | fmax_atz_N10000 | 11690 | 2487.85 | 27.4 / 127.5 |
+  | fmax_adz7_N14000 | 16462 | 2478.24 | 15.3 / 97.6 |
+  | fmax_adz7_N10000 | 16462 | 2478.23 | 22.6 / 114.0 |
+  | fmax_atz7_N14000 | 16000 | 2487.88 | 17.7 / 85.5 |
+  | fmax_atz7_N10000 | 16000 | 2487.87 | 26.7 / 113.0 |
+
+- **Convergence ranges** (range width over the 4 runs N = 10000/14000 x two point sets):
+  `python3 mkrange.py results/ir_colloc_fmax_<b>_N14000.json results/ir_colloc_fmax_<b>_N14000_range.json fmax_<b>_N14000 fmax_<b>_N10000 fmax_<b>7_N14000 fmax_<b>7_N10000`.
+  aDZ / aTZ: 57 / 54 of 99 levels within 1 cm-1, 70 / 70 within 2 cm-1, lowest 19 levels within 1 cm-1, below 1000 cm-1 max 0.29 / 0.27,
+  RMS 2.85 / 2.43, max 12.37 / 7.62, median 0.80 / 0.81 cm-1. The manuscript (Ec 900) version, with the same definition: 58 / 57, 73 / 75,
+  25 levels, 0.23 / 0.21, RMS 2.24 / 2.20, max 9.50 / 7.62 (the manuscript text's "61 / 78 / RMS 1.9" is not reproducible).
+- **Changes from the manuscript levels (N = 14000):** aDZ levels 1-39 median / max |d| 0.07 / 1.21, levels 40-99 0.99 / 9.11, mean 1.03 cm-1;
+  aTZ 0.16 / 1.57, 1.57 / 6.90, mean 1.37 cm-1. Same size as N = 10000 -> 14000 (mean 0.99 / 0.94); point set 1 vs 2 at N = 14000 smaller
+  (mean 0.58 / 0.33). Hence the Delta(M) term of the old objective is not needed: N convergence dominates.
+  Fundamentals within 0.1 cm-1 of the manuscript except the aDZ nu6 pair: 1559.9 (435), 1564.7 (147) -> 1559.4 (354), 1563.5 (224).
+- **Statistics** (`manuscript_tools/xlsx_stats.py`): colloc - GVPT2 aDZ n 58 MAE 5.05 RMS 7.07 (manuscript 61, 5.17, 7.18); aTZ n 60 MAE 7.98
+  RMS 11.48 (60, 7.70, 10.94); aTZ - aDZ MAE 10.11 RMS 12.37 max 26.6 cm-1.
+- **Excel** `results/LiCO2_levels_aDZ_aTZ.xlsx` updated with `manuscript_tools/update_xlsx.py` (input: the 17 Nov version, commit 54d46d0).
+  **Figure 6**: `plot_fig6_fmax.sh` -> `figures/lico2_IR_summary_fmax(.png, _log.png)`, no convergence band (ranges in the Excel file).
+  **Manuscript**: Table 3 collocation cells replaced untracked (`manuscript_tools/edits_table.py`, `table3_new.json`); text changes tracked
+  (`manuscript_tools/edits_text.py`, author Claude, 2026-11-18).
+- **Still open:** step 3 of the 17 Nov request, "continue tuning" (resume `tune_li_max10k.py` from the 115 cached trials, sweep 7 beta[6]);
+  not started. Run it on the workstation, not in the cloud.
 
 ## 4a. UPDATE 17 Nov 2026 18:55 JST — where things stand now (read this before section 4)
 - In the cloud container, fmax_adz_N14000 was killed by the OOM killer (6.1 GB of 7 GB). The cloud container was also reclaimed twice

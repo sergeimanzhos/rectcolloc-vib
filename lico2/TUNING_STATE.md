@@ -5,3 +5,4 @@ Restart command (from this directory):  timeout 7150 python3 tune_li_max10k.py >
 Position when stopped: stage 3 (1% descent), sweep 7, beta[6] x0.99 trial was running and is lost (will be recomputed).
 Current best (sweep 7, after beta[1..5]): Ec=1200, Vmax=5000, p=0, beta=(0.932065, 0.99, 1.0, 1.018814, 1.0, 1.0), J=113.9164 cm-1.
 Sweep 7 has accepted beta[1] -> 0.932065, so a sweep 8 follows after beta[6].
+18 Nov 2026: final runs with these parameters are finished (see MAXRES_HANDOFF.md section 4b); the tuning itself has not been resumed.

@@ -1,0 +1,3 @@
+centre surrogate: degree-4 fit, rms 58.4 cm-1
+fmax_atz_N14000: 11690 fit points available, 1235 validation points, N=14000, beta=[0.932 0.99  1.    1.019 1.    1.   ]
+M=11690 eq/N=5.84 ZPE=2487.88 | res med20 4.00 all 20.14 | maxIm 3.22e-02 | cond nan | 2058s

@@ -1,7 +1,7 @@
 """Tracked-change helper for word/document.xml (raw XML string editing; nothing outside the edited runs is touched)."""
 import re
 from xml.sax.saxutils import escape
-AUTH = 'Claude'; DATE = '2026-11-14T00:00:00Z'
+AUTH = 'Claude'; DATE = '2026-11-18T00:00:00Z'
 _id = [91000]
 def nid():
     _id[0] += 1; return _id[0]

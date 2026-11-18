@@ -1,0 +1,21 @@
+15:22 start run fmax_adz_N10000
+15:48 done fmax_adz_N10000 M 12248 ZPE 2478.23 res med 25.3 max 119.2 t 1545
+15:48 start run fmax_atz_N10000
+16:25 done fmax_atz_N10000 M 11690 ZPE 2487.85 res med 27.4 max 127.5 t 1542
+16:25 start run fmax_adz7_N10000
+18:01 done fmax_adz7_N10000 M 16462 ZPE 2478.23 res med 22.6 max 114.0 t 1563
+18:01 start run fmax_atz7_N10000
+19:13 done fmax_atz7_N10000 M 16000 ZPE 2487.87 res med 26.7 max 113.0 t 1541
+19:13 start run fmax_adz_N14000
+19:48 done fmax_adz_N14000 M 12248 ZPE 2478.26 res med 17.7 max 101.2 t 2088
+19:48 start run fmax_atz_N14000
+20:34 done fmax_atz_N14000 M 11690 ZPE 2487.88 res med 20.1 max 119.0 t 2058
+20:34 start int fmax_adz_N14000
+20:46 done intensities fmax_adz_N14000
+20:46 start int fmax_atz_N14000
+20:58 done intensities fmax_atz_N14000
+20:58 start run fmax_adz7_N14000
+23:07 done fmax_adz7_N14000 M 16462 ZPE 2478.24 res med 15.3 max 97.6 t 2306
+23:07 start run fmax_atz7_N14000
+00:49 done fmax_atz7_N14000 M 16000 ZPE 2487.88 res med 17.7 max 85.5 t 2375
+all done
