@@ -11,6 +11,7 @@ Applications: Cl2CO (NN PES and DFT points) and LiCO2 (DFT points, 100 states, I
 | `skill/rectangular-collocation-vib/SKILL.md` | The procedure as a Claude skill (updated November 2026: LiCO2 max-residual tuning, memory and run-time notes) |
 | `cl2co/` | Cl2CO: NN-PES collocation, DFT-point collocation (aug-cc-pVDZ / aug-cc-pVTZ), GVPT2, IR intensities |
 | `lico2/` | LiCO2 (C2v, doublet): UB3LYP-D3(BJ) collocation for 100 states, IR intensities, GVPT2, figures, Excel summary |
+| `examples/Cl2CO_DFT_spectrum_session.md` | Example session: how a user asks for a spectrum with the skill and what Claude does (Cl2CO from B3LYP points, with the real settings and results) |
 
 ## Cl2CO (`cl2co/`)
 
